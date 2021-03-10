@@ -427,7 +427,7 @@ ggplot(data.root)+
 
 library(lmerTest)
 
-nested.lm <- lmer(Dry_Wt ~ Treatment + Root_Len + (1|Round) + (1|SampleID),
+nested.lm <- lmer(Dry_Wt ~ Treatment + Root_Len + (1|Round/SampleID),
                   data=data.root)
 summary(nested.lm)
 
